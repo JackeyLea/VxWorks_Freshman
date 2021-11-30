@@ -949,22 +949,35 @@ extern "C" {
 #       define DRV_KBD_I8042
 #       define DRV_VGA_M6845
 #   endif /* INCLUDE_VXBUS */
-/*#define INCLUDE_TELNET*/
+/*enable system shell component*/
 #define INCLUDE_SHELL
-/*#define INCLUDE_SYM_TABLE
-#define INCLUDE_STANDALONE_SYM_TABLE
-#define INCLUDE_LOADER
-#define INCLUDE_UNLOADER
-#define INCLUDE_ELF
-#define INCLUDE_STARTUP_SCRIPT
-
 #define INCLUDE_SHELL_CORE
 #define INCLUDE_SHELL_INTERP_C
 #define INCLUDE_SHELL_INTERP_CMD
 #define INCLUDE_SHELL_BANNER
 #define INCLUDE_SHELL_VI_MODE
-#define INCLUDE_USE_NATIVE_SHELL*/
+#define INCLUDE_USE_NATIVE_SHELL
+
+#define INCLUDE_TELNET /*enable telnet component*/
+
 #endif /* INCLUDE_PC_CONSOLE */
+
+/*load system symbol table */
+#define INCLUDE_SYM_TABLE
+#define INCLUDE_SYM_TABLE_INIT
+#define INCLUDE_SYM_TABLE_SHOW
+
+/*
+#define INCLUDE_LOADER
+#define INCLUDE_UNLOADER
+#define INCLUDE_ELF
+#define INCLUDE_STANDALONE_SYM_TABLE
+#define INCLUDE_STARTUP_SCRIPT
+*/
+
+/* enable system utilities like ll/cd/pwd etc */
+
+#define INCLUDE_DISK_UTIL
 
 /* PS/2 101-key default keyboard type (use PC_XT_83_KBD for 83-key) */
 
@@ -1084,6 +1097,31 @@ extern "C" {
 #include "configInum.h"
 
 #define _WRS_BSP_VM_PAGE_OFFSET (VM_PAGE_SIZE)
+
+#define INCLUDE_SHELL
+
+#define INCLUDE_SHELL_CORE
+#define INCLUDE_SHELL_INTERP_C
+#define INCLUDE_SHELL_INTERP_CMD
+#define INCLUDE_SHELL_BANNER
+#define INCLUDE_SHELL_VI_MODE
+#define INCLUDE_USE_NATIVE_SHELL
+
+#define INCLUDE_TELNET
+
+#define INCLUDE_SYM_TABLE
+#define INCLUDE_SYM_TABLE_INIT
+#define INCLUDE_SYM_TABLE_SHOW
+
+/*
+#define INCLUDE_LOADER
+#define INCLUDE_UNLOADER
+#define INCLUDE_ELF
+#define INCLUDE_STANDALONE_SYM_TABLE
+#define INCLUDE_STARTUP_SCRIPT
+*/
+
+#define INCLUDE_DISK_UTIL
 
 #ifdef __cplusplus
 }
